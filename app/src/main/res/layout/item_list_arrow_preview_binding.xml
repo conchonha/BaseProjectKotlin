@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="data"
+            type="com.android.base_project.base.data.ItemListModel" />
+
+        <variable
+            name="action"
+            type="com.android.base_project.base.action.ItemMenuAction" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="@{()->action.onNavigate(data.title)}"
+        android:onLongClickListener="@{()->action.onLongClick(data.title)}">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="16dp"
+            android:focusable="false"
+            android:src="@{data.startDrawable}"
+            android:visibility="@{data.startDrawable == null ? View.GONE : View.VISIBLE"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{data.title}"
+            app:layout_constraintLeft_toRightOf="@+id/image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@{data.subTitle}"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
