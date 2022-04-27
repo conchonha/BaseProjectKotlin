@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.Gravity" />
+
+        <variable
+            name="isCaps"
+            type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="wrap_content">
+
+        <!--    Number row-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_1"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="@dimen/dp8"
+            android:minWidth="@dimen/dp29"
+            android:nextFocusUp="@id/btn_enter"
+            android:nextFocusDown="@id/btn_2"
+            android:text="@string/text_1_normal"
+            app:layout_constraintEnd_toStartOf="@+id/btn_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_2"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="@dimen/dp29"
+            android:nextFocusUp="@id/btn_1"
+            android:nextFocusDown="@id/btn_3"
+            android:text="@string/text_2"
+            app:layout_constraintEnd_toStartOf="@+id/btn_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_3"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="@dimen/dp29"
+            android:nextFocusUp="@id/btn_2"
+            android:nextFocusDown="@id/btn_4"
+            android:text="@string/text_3"
+            app:layout_constraintEnd_toStartOf="@+id/btn_4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_4"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+
+            android:minWidth="@dimen/dp29"
+            android:nextFocusUp="@id/btn_3"
+            android:nextFocusDown="@id/btn_5"
+            android:text="@string/text_4"
+            app:layout_constraintEnd_toStartOf="@+id/btn_5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_5"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="@dimen/dp29"
+            android:nextFocusUp="@id/btn_4"
+            android:nextFocusDown="@id/btn_6"
+            android:text="@string/text_5"
+            app:layout_constraintEnd_toStartOf="@+id/btn_6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_6"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="@dimen/dp29"
+            android:nextFocusUp="@id/btn_5"
+            android:nextFocusDown="@id/btn_7"
+            android:text="@string/text_6"
+            app:layout_constraintEnd_toStartOf="@+id/btn_7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_7"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="@dimen/dp29"
+            android:nextFocusUp="@id/btn_6"
+            android:nextFocusDown="@id/btn_8"
+            android:text="@string/text_7"
+            app:layout_constraintEnd_toStartOf="@+id/btn_8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_8"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="@dimen/dp29"
+            android:nextFocusUp="@id/btn_7"
+            android:nextFocusDown="@id/btn_9"
+            android:text="@string/text_8"
+            app:layout_constraintEnd_toStartOf="@+id/btn_9"
+            app:layout_constraintStart_toEndOf="@+id/btn_7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_9"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="@dimen/dp29"
+            android:nextFocusUp="@id/btn_8"
+            android:nextFocusDown="@id/btn_0"
+            android:text="@string/text_9"
+            app:layout_constraintEnd_toStartOf="@+id/btn_0"
+            app:layout_constraintStart_toEndOf="@+id/btn_8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_0"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="@dimen/dp8"
+            android:minWidth="@dimen/dp29"
+            android:nextFocusUp="@id/btn_9"
+            android:nextFocusDown="@id/btn_q"
+            android:text="@string/text_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--    Text row 1-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_q"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="@dimen/dp23"
+            android:layout_marginTop="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_0"
+            android:nextFocusDown="@id/btn_w"
+            android:text="@string/text_q"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_w"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_w"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_q"
+            android:nextFocusDown="@id/btn_e"
+            android:text="@string/text_w"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_e"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_q"
+            app:layout_constraintTop_toTopOf="@+id/btn_q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_e"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_w"
+            android:nextFocusDown="@id/btn_r"
+            android:text="@string/text_e"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_r"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_w"
+            app:layout_constraintTop_toTopOf="@+id/btn_q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_r"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_e"
+            android:nextFocusDown="@id/btn_t"
+            android:text="@string/text_r"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_t"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_e"
+            app:layout_constraintTop_toTopOf="@+id/btn_q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_t"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_r"
+            android:nextFocusDown="@id/btn_y"
+            android:text="@string/text_t"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_y"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_r"
+            app:layout_constraintTop_toTopOf="@+id/btn_q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_y"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_t"
+            android:nextFocusDown="@id/btn_u"
+            android:text="@string/text_y"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_u"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_t"
+            app:layout_constraintTop_toTopOf="@+id/btn_q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_u"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_y"
+            android:nextFocusDown="@id/btn_i"
+            android:text="@string/text_u"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_i"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_y"
+            app:layout_constraintTop_toTopOf="@+id/btn_q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_i"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_u"
+            android:nextFocusDown="@id/btn_o"
+            android:text="@string/text_i"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_o"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_u"
+            app:layout_constraintTop_toTopOf="@+id/btn_q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_o"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_i"
+            android:nextFocusDown="@id/btn_p"
+            android:text="@string/text_o"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_p"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_i"
+            app:layout_constraintTop_toTopOf="@+id/btn_q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_p"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="@dimen/dp23"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_o"
+            android:nextFocusDown="@id/btn_caps"
+            android:text="@string/text_p"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_o"
+            app:layout_constraintTop_toTopOf="@+id/btn_q" />
+
+        <!--        Text row 2-->
+
+        <ImageButton
+            android:id="@+id/btn_caps"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="6dp"
+            android:background="#25000000"
+            android:gravity="center"
+            android:minWidth="@dimen/dp25"
+            android:src="@drawable/ic_enter"
+            android:nextFocusUp="@id/btn_p"
+            android:nextFocusDown="@id/btn_a"
+            app:layout_constraintEnd_toStartOf="@+id/btn_a"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_q"
+            app:tint="@color/teal_200" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_a"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_caps"
+            android:nextFocusDown="@id/btn_s"
+            android:text="@string/text_a"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_s"
+            app:layout_constraintStart_toEndOf="@+id/btn_caps"
+            app:layout_constraintTop_toTopOf="@+id/btn_caps" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_s"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_a"
+            android:nextFocusDown="@id/btn_d"
+            android:text="@string/text_s"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_d"
+            app:layout_constraintStart_toEndOf="@+id/btn_a"
+            app:layout_constraintTop_toTopOf="@+id/btn_caps" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_d"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_s"
+            android:nextFocusDown="@id/btn_f"
+            android:text="@string/text_d"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_f"
+            app:layout_constraintStart_toEndOf="@+id/btn_s"
+            app:layout_constraintTop_toTopOf="@+id/btn_caps" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_f"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_d"
+            android:nextFocusDown="@id/btn_g"
+            android:text="@string/text_f"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_g"
+            app:layout_constraintStart_toEndOf="@+id/btn_d"
+            app:layout_constraintTop_toTopOf="@+id/btn_caps" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_g"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_f"
+            android:nextFocusDown="@id/btn_h"
+            android:text="@string/text_g"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_h"
+            app:layout_constraintStart_toEndOf="@+id/btn_f"
+            app:layout_constraintTop_toTopOf="@+id/btn_caps" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_h"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_g"
+            android:nextFocusDown="@id/btn_j"
+            android:text="@string/text_h"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_j"
+            app:layout_constraintStart_toEndOf="@+id/btn_g"
+            app:layout_constraintTop_toTopOf="@+id/btn_caps" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_j"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_h"
+            android:nextFocusDown="@id/btn_k"
+            android:text="@string/text_j"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_k"
+            app:layout_constraintStart_toEndOf="@+id/btn_h"
+            app:layout_constraintTop_toTopOf="@+id/btn_caps" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_k"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_j"
+            android:nextFocusDown="@id/btn_l"
+            android:text="@string/text_k"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_l"
+            app:layout_constraintStart_toEndOf="@+id/btn_j"
+            app:layout_constraintTop_toTopOf="@+id/btn_caps" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_l"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_k"
+            android:nextFocusDown="@id/btn_key_back"
+            android:text="@string/text_key_l"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_key_back"
+            app:layout_constraintStart_toEndOf="@+id/btn_k"
+            app:layout_constraintTop_toTopOf="@+id/btn_caps" />
+
+        <ImageButton
+            android:id="@+id/btn_key_back"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="@dimen/dp8"
+            android:background="#40000000"
+            android:gravity="center"
+            android:minWidth="@dimen/dp25"
+            android:nextFocusUp="@id/btn_l"
+            android:nextFocusDown="@id/btn_space"
+            android:padding="@dimen/dp0"
+            android:src="@drawable/ic_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_l"
+            app:layout_constraintTop_toTopOf="@id/btn_caps"
+            app:tint="@color/white" />
+
+        <!--        Text row 3-->
+        <ImageButton
+            android:id="@+id/btn_space"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="6dp"
+            android:background="#40000000"
+            android:minWidth="@dimen/dp41"
+            android:nextFocusUp="@id/btn_key_back"
+            android:nextFocusDown="@id/btn_z"
+            android:src="@drawable/ic_space"
+            app:layout_constraintEnd_toStartOf="@+id/btn_z"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_caps"
+            app:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_z"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_space"
+            android:nextFocusDown="@id/btn_x"
+            android:text="@string/text_z"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_x"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_space"
+            app:layout_constraintTop_toTopOf="@+id/btn_space" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_x"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_z"
+            android:nextFocusDown="@id/btn_c"
+            android:text="@string/text_x"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_c"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_z"
+            app:layout_constraintTop_toTopOf="@+id/btn_space" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_c"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_x"
+            android:nextFocusDown="@id/btn_v"
+            android:text="@string/text_c"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_x"
+            app:layout_constraintTop_toTopOf="@+id/btn_space" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_v"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_c"
+            android:nextFocusDown="@id/btn_b"
+            android:text="@string/text_v"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_b"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_c"
+            app:layout_constraintTop_toTopOf="@+id/btn_space" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_b"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_v"
+            android:nextFocusDown="@id/btn_n"
+            android:text="@string/text_b"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_n"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_v"
+            app:layout_constraintTop_toTopOf="@+id/btn_space" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_n"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_b"
+            android:nextFocusDown="@id/btn_m"
+            android:text="@string/text_n"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_m"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_b"
+            app:layout_constraintTop_toTopOf="@+id/btn_space" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_m"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_marginStart="6dp"
+            android:minWidth="26dp"
+            android:nextFocusUp="@id/btn_n"
+            android:nextFocusDown="@id/btn_enter"
+            android:text="@string/text_m"
+            android:textAllCaps="@{isCaps}"
+            app:layout_constraintEnd_toStartOf="@+id/btn_enter"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_n"
+            app:layout_constraintTop_toTopOf="@+id/btn_space" />
+
+        <LinearLayout
+            android:id="@+id/btn_enter"
+            android:layout_width="@dimen/dp73"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="@dimen/dp8"
+            android:background="#40000000"
+            android:gravity="center"
+            android:minWidth="@dimen/dp73"
+            android:nextFocusUp="@id/btn_m"
+            android:nextFocusDown="@id/btn_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_m"
+            app:layout_constraintTop_toTopOf="@id/btn_space">
+
+            <ImageView
+                android:id="@+id/img_enter"
+                android:layout_width="@dimen/dp16"
+                android:layout_height="@dimen/dp16"
+                android:src="@drawable/ic_enter" />
+
+            <TextView
+                android:id="@+id/btn_enter_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp4"
+                android:text="@string/text_id_12"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_btn_num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="btn_0,btn_1,btn_2,btn_3,btn_4,btn_5,btn_6,
+            btn_7,btn_8,btn_9,btn_q,btn_w,btn_e,btn_r,btn_t,btn_y,btn_u,btn_i,btn_o,
+            btn_p,btn_a,btn_s,btn_d,btn_f,btn_g,btn_h,btn_j,btn_k,btn_l,btn_z,
+            btn_c,btn_x,btn_c,btn_v,btn_b,btn_n,btn_m" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
